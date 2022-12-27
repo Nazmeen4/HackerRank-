@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int n,d,temp;
+        long sum=0;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        temp=n;
+        while(n!=0){
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+        }
+        if(temp%sum==0)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
